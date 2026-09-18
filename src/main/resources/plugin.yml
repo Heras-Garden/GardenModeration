@@ -1,0 +1,49 @@
+name: GardenModeration
+version: '${project.version}'
+main: com.herasgarden.gardenmoderation.GardenModeration
+api-version: '26.2'
+author: Hera's Garden
+website: https://herasgarden.net
+description: Persistent Minecraft moderation with Iris Discord control.
+depend: [GardenCore]
+
+commands:
+  warn:
+    description: Warn a player.
+    usage: /warn <player> <reason>
+  mute:
+    description: Mute a player for a duration or permanently.
+    usage: /mute <player> <duration|permanent> <reason>
+  unmute:
+    description: Remove active mutes.
+    usage: /unmute <player> [reason]
+  kick:
+    description: Kick a player.
+    usage: /kick <player> <reason>
+  tempban:
+    description: Temporarily ban a player.
+    usage: /tempban <player> <duration> <reason>
+  ban:
+    description: Permanently ban a player.
+    usage: /ban <player> <reason>
+  unban:
+    aliases: [pardon]
+    description: Remove active Garden bans.
+    usage: /unban <player> [reason]
+  modhistory:
+    description: View a player's Garden moderation history.
+    usage: /modhistory <player>
+
+permissions:
+  gardenmoderation.warn:
+    default: op
+  gardenmoderation.mute:
+    default: op
+  gardenmoderation.kick:
+    default: op
+  gardenmoderation.ban:
+    default: op
+  gardenmoderation.history:
+    default: op
+  gardenmoderation.bypass:
+    default: op

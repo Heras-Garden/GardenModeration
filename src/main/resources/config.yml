@@ -1,0 +1,6 @@
+iris:
+  poll-ticks: 40
+  stale-command-seconds: 300
+
+history:
+  display-limit: 10
